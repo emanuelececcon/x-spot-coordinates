@@ -7,7 +7,6 @@ import io.papermc.paper.event.player.PlayerItemFrameChangeEvent;
 import java.util.HashMap;
 import java.util.Map;
 import org.bukkit.Bukkit;
-import org.bukkit.Material;
 import org.bukkit.World;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.HumanEntity;
@@ -106,9 +105,13 @@ final class MapWatcher implements Listener {
         inspect(player.getItemOnCursor());
     }
 
-    /** Adds the renderer if {@code item} is a map with a marker that has none yet. */
+    /**
+     * Adds the renderer if {@code item} is a map with a marker that has none yet. Goes by the
+     * components, not the item type: since 26.x every treasure and explorer map is its own item
+     * (buried_treasure_map, woodland_mansion_map, ...), not a filled_map.
+     */
     private void inspect(ItemStack item) {
-        if (item == null || item.getType() != Material.FILLED_MAP) {
+        if (item == null || item.isEmpty()) {
             return;
         }
         MapId mapId = item.getData(DataComponentTypes.MAP_ID);

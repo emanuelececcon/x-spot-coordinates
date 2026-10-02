@@ -17,6 +17,7 @@ layout: one-line
 corner: auto
 
 # Marker types that should NOT get a label, for example [red_x] to skip buried treasure maps.
-# Common types: red_x (buried treasure), mansion, monument, trial_chambers, jungle_temple,
-# swamp_hut, village_desert, village_plains, village_savanna, village_snowy, village_taiga
+# Types: red_x (Buried Treasure Map), mansion, monument, trial_chambers, jungle_temple, swamp_hut,
+# ancient_city, mineshaft, desert_pyramid, abandoned_camp, ocean_ruin_warm,
+# village_desert, village_plains, village_savanna, village_snowy, village_taiga
 disabled-markers: []

@@ -12,7 +12,7 @@ A Paper 26.3 plugin that writes the X and Z of a treasure or explorer map's mark
 
 - **Exact coordinates.** Every treasure and explorer map item stores its marker's world position (the `map_decorations` component). The plugin reads that value, so the label shows the marker's exact X and Z. On a Buried Treasure Map that's the column the chest is buried in.
 - **Everyone sees it.** The label is drawn into the map picture with the game's own map font, so it shows in hand and in item frames, with no client mod or resource pack. Copies of a map show it too.
-- **Only maps with a marker.** Buried treasure, woodland, ocean, trial, jungle, swamp, village and the other explorer maps. Maps you craft and fill yourself stay vanilla.
+- **Only maps with a marker.** Every 26.3 structure map: Buried Treasure, Buried Trial Chambers, Buried Ancient City, Buried Mineshaft, Woodland Mansion, Ocean Monument, Jungle Pyramid, Desert Pyramid, Swamp Hut, Abandoned Camp, Warm Ocean Ruins and the five Village maps. The plugin looks for a map id plus a marker on the item, not for a specific item type, so new map items work too. Maps you craft and fill yourself stay vanilla.
 - **Nothing is saved.** The item and the saved map data aren't changed. Remove the plugin and the maps look vanilla again. The game draws the X and the player arrow on top of the map picture, so the label never hides them.
 
 ## Settings
@@ -24,7 +24,7 @@ A Paper 26.3 plugin that writes the X and Z of a treasure or explorer map's mark
 | `style` | `parchment` (light tag, brown border), `ink` (text with a light outline), `dark` (dark tag, light text) | `parchment` |
 | `layout` | `one-line` (`X 1289 Z -3527`), `two-lines` (X above Z). Coordinates too long for one line use two. | `one-line` |
 | `corner` | `auto` (the corner farthest from the marker), `top-left`, `top-right`, `bottom-left`, `bottom-right` | `auto` |
-| `disabled-markers` | marker types to skip, e.g. `[red_x]` for buried treasure maps | `[]` |
+| `disabled-markers` | marker types to skip, e.g. `[red_x]` for Buried Treasure Maps. The full list is in `config.yml`. | `[]` |
 
 ## Commands
 
