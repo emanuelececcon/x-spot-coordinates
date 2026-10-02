@@ -1,0 +1,19 @@
+name: XSpotCoordinates
+version: ${project.version}
+main: io.github.emanuelececcon.xspot.XSpotCoordinatesPlugin
+api-version: "26.3"
+description: Shows the X/Z of the marker in a corner of treasure and explorer maps
+authors:
+  - emanuelececcon
+website: https://github.com/emanuelececcon/x-spot-coordinates
+
+commands:
+  xspot:
+    description: Shows the plugin status, or reloads config.yml
+    usage: /xspot [reload]
+    permission: xspot.admin
+
+permissions:
+  xspot.admin:
+    description: Use /xspot and /xspot reload
+    default: op

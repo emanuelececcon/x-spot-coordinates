@@ -1,0 +1,22 @@
+# X spot coordinates
+# Draws the X and Z of a treasure or explorer map's marker into a corner of the map.
+# Apply changes with /xspot reload.
+
+# parchment = light tag with a brown border
+# ink       = dark text with a light outline, no tag
+# dark      = dark tag with light text
+style: parchment
+
+# one-line  = "X 1289 Z -3527"
+# two-lines = "X 1289" above "Z -3527"
+# Coordinates too long for one line switch to two lines on their own.
+layout: one-line
+
+# auto = the corner farthest from the marker
+# or one of: top-left, top-right, bottom-left, bottom-right
+corner: auto
+
+# Marker types that should NOT get a label, for example [red_x] to skip buried treasure maps.
+# Common types: red_x (buried treasure), mansion, monument, trial_chambers, jungle_temple,
+# swamp_hut, village_desert, village_plains, village_savanna, village_snowy, village_taiga
+disabled-markers: []
